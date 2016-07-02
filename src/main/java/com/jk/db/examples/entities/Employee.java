@@ -1,9 +1,27 @@
-package com.jalalkiswani.examples.beans;
+package com.jk.db.examples.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "hr_employees")
 public class Employee {
+	@Id
+	@Column(name = "emp_id")
 	int id;
+
+	@Column(name = "emp_name")
 	String name;
+
+	@Column(name = "emp_salary")
 	double salary;
+
+	@ManyToOne
+	@JoinColumn(name = "dep_id")
 	Department department;
 
 	public int getId() {

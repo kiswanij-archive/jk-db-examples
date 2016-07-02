@@ -1,4 +1,4 @@
-package com.jalalkiswani.examples.beans;
+package com.jk.db.examples.beans;
 
 public class Department {
 	int id;

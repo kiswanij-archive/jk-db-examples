@@ -1,10 +1,10 @@
-package com.jalalkiswani.examples.jkdb;
+package com.jk.db.examples;
 
 import java.util.List;
 
-import com.jalalkiswani.examples.beans.Employee;
 import com.jk.db.dataaccess.plain.JKPlainDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
+import com.jk.db.examples.beans.Employee;
 import com.jk.util.JK;
 
 /**
@@ -30,7 +30,7 @@ public class JKDbExample1 {
 	/**
 	 * 
 	 */
-	private static void clearEmployeesTable() {
+	public static void clearEmployeesTable() {
 		plainDataAccess.execute("DELETE FROM hr_employees");
 		JK.print("Employees table cleared succ...");
 	}
@@ -38,7 +38,7 @@ public class JKDbExample1 {
 	/**
 	 * 
 	 */
-	private static void getAllEmployeeRecords() {
+	public static void getAllEmployeeRecords() {
 		// get all employees with salary more than 10
 		List<Employee> list = plainDataAccess.executeQueryAsObjectList(Employee.class, "id,name,salary",
 				"SELECT emp_id,emp_name,emp_salary FROM hr_employees WHERE emp_salary>?", 100);
@@ -54,7 +54,7 @@ public class JKDbExample1 {
 	/**
 	 * 
 	 */
-	private static void insertEmployeeRecord() {
+	public static void insertEmployeeRecord() {
 		plainDataAccess.execute("INSERT INTO hr_employees (emp_id,dep_id,emp_name,emp_salary) VALUES(?,?,?,?)", EMP_ID, 1, "Jalal", 1000);
 		JK.print("Record Added Success");
 	}
@@ -62,7 +62,7 @@ public class JKDbExample1 {
 	/**
 	 * 
 	 */
-	private static void updateEmployeeRecord() {
+	public static void updateEmployeeRecord() {
 		plainDataAccess.execute("UPDATE hr_employees SET emp_salary=? WHERE emp_id=?", 2222, EMP_ID);
 		JK.print("Updated succ...");
 	}
@@ -70,7 +70,7 @@ public class JKDbExample1 {
 	/**
 	 * 
 	 */
-	private static void deleteEmployeeRecord() {
+	public static void deleteEmployeeRecord() {
 		plainDataAccess.execute("DELETE FROM hr_employees WHERE emp_id=?", EMP_ID);
 		JK.print("Deleted succ...");
 	}
