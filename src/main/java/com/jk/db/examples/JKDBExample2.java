@@ -1,3 +1,18 @@
+/*
+ * Copyright 2002-2016 Jalal Kiswani.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.jk.db.examples;
 
 import java.sql.PreparedStatement;
@@ -17,8 +32,8 @@ import com.jk.db.examples.beans.Department;
 import com.jk.util.JK;
 
 /**
- * Full Plain API exmaple
- * 
+ * Full Plain API exmaple.
+ *
  * @author Jalal Kiswani Jul 2, 2016
  */
 public class JKDBExample2 {
@@ -28,6 +43,12 @@ public class JKDBExample2 {
 	}
 	static JKPlainDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
 
+	/**
+	 * The main method.
+	 *
+	 * @param args
+	 *            the arguments
+	 */
 	public static void main(String[] args) {
 
 		executeQueryAsCachedRowSet();
@@ -47,56 +68,95 @@ public class JKDBExample2 {
 		executeQueryAsSingleObject();
 	}
 
+	/**
+	 * Execute query as single object.
+	 */
 	public static void executeQueryAsSingleObject() {
 		Department dep = dataAccess.executeQueryAsSingleObject(Department.class, "SELECT * FROM hr_departments WHERE dep_id=?", 3);
 		JK.printBlock(dep);
 	}
 
+	/**
+	 * Execute query as object list.
+	 */
 	public static void executeQueryAsObjectList() {
 		List<Department> list = dataAccess.executeQueryAsObjectList(Department.class, "SELECT * FROM hr_departments WHERE dep_id<>?", 3);
 		JK.printBlock(list);
 	}
 
+	/**
+	 * Execute query as array.
+	 */
 	public static void executeQueryAsArray() {
 		Object[] list = dataAccess.executeQueryAsArray("SELECT * FROM hr_departments WHERE dep_id<?", 4);
 		JK.printBlock(list);
 	}
 
+	/**
+	 * Gets the system date.
+	 *
+	 * @return the system date
+	 */
 	public static void getSystemDate() {
 		Date systemDate = dataAccess.getSystemDate();
 		JK.print("System date:", systemDate);
 	}
 
+	/**
+	 * Execute query as list.
+	 */
 	public static void executeQueryAsList() {
 		List<List<Object>> list = dataAccess.executeQueryAsList("SELECT * FROM hr_departments WHERE dep_id>?", 1);
 		JK.printBlock(list);
 	}
 
+	/**
+	 * Execute query as string.
+	 */
 	public static void executeQueryAsString() {
 		String result = dataAccess.executeQueryAsString("SELECT * FROM hr_departments WHERE dep_id>?", ",", "\n", 1);
 		JK.printBlock("String results : \n", result);
 	}
 
+	/**
+	 * Gets the rows count.
+	 *
+	 * @return the rows count
+	 */
 	public static void getRowsCount() {
 		int rowsCount = dataAccess.getRowsCount("SELECT dep_name FROM hr_departments WHERE 1=?", 1);
 		JK.printBlock("Rows count:", rowsCount);
 	}
 
+	/**
+	 * Gets the next id.
+	 *
+	 * @return the next id
+	 */
 	public static void getNextId() {
 		Long nextId = dataAccess.getNextId("hr_departments", "dep_id");
 		JK.print("Next id:", nextId);
 	}
 
+	/**
+	 * Exeute single output query.
+	 */
 	public static void exeuteSingleOutputQuery() {
 		Object name = dataAccess.exeuteSingleOutputQuery("SELECT dep_name FROM hr_departments WHERE dep_id=?", 2);
 		JK.print("Result of exeuteSingleOutputQuery : ", name);
 	}
 
+	/**
+	 * Execute.
+	 */
 	public static void execute() {
 		dataAccess.execute("UPDATE hr_departments SET dep_name=? WHERE dep_id=?", "I.T.2", 1);
 		JK.print("Updated succ using simple execute..");
 	}
 
+	/**
+	 * Execute query as id value.
+	 */
 	public static void executeQueryAsIdValue() {
 		List<JKDbIdValue> list = dataAccess.executeQueryAsIdValue("SELECT * FROM hr_departments WHERE dep_id>?", 0);
 		for (JKDbIdValue idValue : list) {
@@ -104,11 +164,17 @@ public class JKDBExample2 {
 		}
 	}
 
+	/**
+	 * Execute query as cached row set.
+	 */
 	public static void executeQueryAsCachedRowSet() {
 		CachedRowSet rs = dataAccess.executeQueryAsCachedRowSet("SELECT * FROM hr_departments where 1=?", 1);
 		JK.print(rs);
 	}
 
+	/**
+	 * Execute update.
+	 */
 	// Complex Tables and Quries
 	public static void executeUpdate() {
 		dataAccess.executeUpdate(new JKUpdater() {
@@ -128,6 +194,11 @@ public class JKDBExample2 {
 		JK.print("Updated succ using updater..");
 	}
 
+	/**
+	 * Gets the list.
+	 *
+	 * @return the list
+	 */
 	public static void getList() {
 		List<Department> d = dataAccess.getList(new JKFinder() {
 
@@ -156,6 +227,9 @@ public class JKDBExample2 {
 		JK.line();
 	}
 
+	/**
+	 * Find record.
+	 */
 	public static void findRecord() {
 		final int id = 3;
 		Department d = dataAccess.findRecord(new JKFinder() {
