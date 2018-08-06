@@ -1,9 +1,9 @@
 package com.jk.util.examples;
 
-import com.jk.cache.JKCacheFactory;
-import com.jk.cache.JKCacheManager;
 import com.jk.db.examples.beans.Employee;
 import com.jk.util.JK;
+import com.jk.util.cache.JKCacheFactory;
+import com.jk.util.cache.JKCacheManager;
 
 public class CacheExample {
 	public static void main(String[] args) {

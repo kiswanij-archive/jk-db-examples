@@ -6,8 +6,8 @@ import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
-import com.jk.exceptions.handler.ExceptionHandler;
-import com.jk.exceptions.handler.JKExceptionHandler;
+import com.jk.util.exceptions.handler.ExceptionHandler;
+import com.jk.util.exceptions.handler.JKExceptionHandler;
 
 @ExceptionHandler
 public class FileNotFoundExceptionHandler implements JKExceptionHandler<FileNotFoundException> {
