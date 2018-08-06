@@ -1,6 +1,6 @@
 package com.jk.db.examples;
 
-import com.jk.framework.application.ApplicationManager;
+import com.jk.application.api.ApplicationManager;
 import com.jk.util.JK;
 
 public class Startup {
