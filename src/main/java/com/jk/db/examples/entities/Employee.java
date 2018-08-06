@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +23,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Employee.
  *
@@ -30,16 +32,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "hr_employees")
 public class Employee {
+	
+	/** The id. */
 	@Id
 	@Column(name = "emp_id")
 	int id;
 
+	/** The name. */
 	@Column(name = "emp_name")
 	String name;
 
+	/** The salary. */
 	@Column(name = "emp_salary")
 	double salary;
 
+	/** The department. */
 	@ManyToOne
 	@JoinColumn(name = "dep_id")
 	Department department;

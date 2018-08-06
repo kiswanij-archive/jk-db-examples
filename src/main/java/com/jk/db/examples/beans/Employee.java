@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,15 +16,24 @@
  */
 package com.jk.db.examples.beans;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Employee.
  *
  * @author Jalal Kiswani
  */
 public class Employee {
+	
+	/** The id. */
 	int id;
+	
+	/** The name. */
 	String name;
+	
+	/** The salary. */
 	double salary;
+	
+	/** The department. */
 	Department department;
 
 	/**
@@ -98,20 +108,43 @@ public class Employee {
 		this.department = department;
 	}
 
+	/**
+	 * Creates the.
+	 *
+	 * @return the employee
+	 */
 	public static Employee create() {
 		return new Employee();
 	}
 
+	/**
+	 * Id.
+	 *
+	 * @param id the id
+	 * @return the employee
+	 */
 	public Employee id(int id) {
 		setId(id);
 		return this;
 	}
 
+	/**
+	 * Name.
+	 *
+	 * @param name the name
+	 * @return the employee
+	 */
 	public Employee name(String name) {
 		setName(name);
 		return this;
 	}
 
+	/**
+	 * Salary.
+	 *
+	 * @param salary the salary
+	 * @return the employee
+	 */
 	public Employee salary(double salary) {
 		setSalary(salary);
 		return this;

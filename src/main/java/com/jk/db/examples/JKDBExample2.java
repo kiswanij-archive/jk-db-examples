@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +32,7 @@ import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.examples.beans.Department;
 import com.jk.util.JK;
 
+// TODO: Auto-generated Javadoc
 /**
  * Full Plain API exmaple.
  *
@@ -41,6 +43,8 @@ public class JKDBExample2 {
 		// Un-comment the below line to enable debugging
 		// JK.debug();
 	}
+	
+	/** The data access. */
 	static JKPlainDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**
