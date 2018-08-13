@@ -14,25 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jk.db.examples;
+package com.jk.util.examples;
 
-import org.jboss.jandex.Main;
+import com.jk.util.annotations.Author;
+import com.jk.util.annotations.HistoryItem;
 
-// TODO: Auto-generated Javadoc
 /**
- * Test advanced JK-DB features.
- *
- * @author Jalal Kiswani Jul 2, 2016
+ * The Class AnnotationExample.
  */
-public class JKDbExample3 {
+@Author(date = "8/6/2018", description = "Example of annotation utilities", name = "Jalal Kiswani", version = "1.0")
+@HistoryItem(date = "8/7/2018", version = 1.1, developer = "Jalal Kiswani", description = "test description")
+@HistoryItem(date = "8/8/2018", version = 1.2, developer = "Jalal Kiswani", description = "test2 description")
+public class AnnotationExample {
 	
-	/**
-	 * The main method.
-	 *
-	 * @param args
-	 *            the arguments
-	 */
-	public static void main(String[] args) {
-		
-	}
 }

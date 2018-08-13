@@ -14,25 +14,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jk.db.examples;
+package com.jk.util.examples.exception;
 
-import org.jboss.jandex.Main;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import com.jk.util.JKExcelUtil;
+import com.jk.util.exceptions.handler.JKExceptionHandlerFactory;
+import com.jk.util.exceptions.handler.JKExceptionUtil;
 
 // TODO: Auto-generated Javadoc
 /**
- * Test advanced JK-DB features.
- *
- * @author Jalal Kiswani Jul 2, 2016
+ * The Class ExceptionHandlerTest.
  */
-public class JKDbExample3 {
-	
+public class ExceptionHandlerTest {
+	static {
+		JKExceptionHandlerFactory.getInstance().registerHanders("com.jk.util.examples.exception");
+	}
+
 	/**
 	 * The main method.
 	 *
-	 * @param args
-	 *            the arguments
+	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		
+		try {
+			FileInputStream in=new FileInputStream("missingfile.dat");
+		} catch (FileNotFoundException e) {
+			JKExceptionUtil.handle(e);
+		}
 	}
 }

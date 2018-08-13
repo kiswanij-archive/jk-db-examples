@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +24,7 @@ import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.examples.entities.Department;
 import com.jk.util.JK;
 
+// TODO: Auto-generated Javadoc
 /**
  * ORM Example.
  *
@@ -32,7 +34,11 @@ public class JKDbExample4 {
 	static {
 		JK.debug();
 	}
+	
+	/** The Constant ID. */
 	private static final int ID = 100;
+	
+	/** The orm. */
 	static JKOrmDataAccess orm = JKDataSourceFactory.getOrmDataAccess();
 
 	/**
@@ -51,6 +57,9 @@ public class JKDbExample4 {
 		executeQuery();
 	}
 
+	/**
+	 * Insert.
+	 */
 	private static void insert() {
 		Department dep = new Department();
 		dep.setId(ID);
@@ -59,6 +68,9 @@ public class JKDbExample4 {
 		JK.print("Insert : ", dep);
 	}
 
+	/**
+	 * Update.
+	 */
 	private static void update() {
 		Department dep = orm.find(Department.class, ID);
 		JK.print("Found department :", dep);
@@ -67,22 +79,38 @@ public class JKDbExample4 {
 		JK.print("Updated...");
 	}
 
+	/**
+	 * Delete.
+	 */
 	private static void delete() {
 		orm.delete(ID, Department.class);
 		JK.print("Deleted succ...");
 	}
 
+	/**
+	 * Gets the list.
+	 *
+	 * @return the list
+	 */
 	private static void getList() {
 		List<Department> list = orm.getList(Department.class);
 		JK.print("getList() : ", list);
 	}
 
+	/**
+	 * Gets the list with filter.
+	 *
+	 * @return the list with filter
+	 */
 	private static void getListWithFilter() {
 		Map<String, Object> paramters = JK.toMap("name", "Sales");
 		List<Department> list = orm.getList(Department.class, paramters);
 		JK.print("getListWithFilter() : ", list);
 	}
 
+	/**
+	 * Execute query.
+	 */
 	private static void executeQuery() {
 		List<Department> list = orm.executeQuery(Department.class, "SELECT d FROM Department d WHERE d.id>?1", 1);
 		JK.print("executeQuery(): ", list);

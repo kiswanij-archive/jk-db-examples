@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,13 +23,18 @@ import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.examples.beans.Employee;
 import com.jk.util.JK;
 
+// TODO: Auto-generated Javadoc
 /**
  * Test plain CRUD Operations.
  *
  * @author Jalal Kiswani Jul 2, 2016
  */
 public class JKDbExample1 {
+	
+	/** The Constant EMP_ID. */
 	static final int EMP_ID = 1050;
+	
+	/** The plain data access. */
 	static JKPlainDataAccess plainDataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**

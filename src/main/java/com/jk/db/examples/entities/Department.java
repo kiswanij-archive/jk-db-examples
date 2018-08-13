@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +21,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Department.
  *
@@ -28,10 +30,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "hr_departments")
 public class Department {
+	
+	/** The id. */
 	@Id
 	@Column(name = "dep_id")
 	int id;
 
+	/** The name. */
 	@Column(name = "dep_name")
 	String name;
 

@@ -1,5 +1,6 @@
 /*
- * Copyright 2002-2016 Jalal Kiswani.
+ * Copyright 2002-2018 Jalal Kiswani. 
+ * E-mail: Kiswani.Jalal@Gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,15 +16,24 @@
  */
 package com.jk.db.examples.beans;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Employee.
  *
  * @author Jalal Kiswani
  */
 public class Employee {
+	
+	/** The id. */
 	int id;
+	
+	/** The name. */
 	String name;
+	
+	/** The salary. */
 	double salary;
+	
+	/** The department. */
 	Department department;
 
 	/**
@@ -38,8 +48,7 @@ public class Employee {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id
-	 *            the new id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -57,8 +66,7 @@ public class Employee {
 	/**
 	 * Sets the name.
 	 *
-	 * @param name
-	 *            the new name
+	 * @param name the new name
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -76,8 +84,7 @@ public class Employee {
 	/**
 	 * Sets the salary.
 	 *
-	 * @param salary
-	 *            the new salary
+	 * @param salary the new salary
 	 */
 	public void setSalary(double salary) {
 		this.salary = salary;
@@ -95,11 +102,52 @@ public class Employee {
 	/**
 	 * Sets the department.
 	 *
-	 * @param department
-	 *            the new department
+	 * @param department the new department
 	 */
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+
+	/**
+	 * Creates the.
+	 *
+	 * @return the employee
+	 */
+	public static Employee create() {
+		return new Employee();
+	}
+
+	/**
+	 * Id.
+	 *
+	 * @param id the id
+	 * @return the employee
+	 */
+	public Employee id(int id) {
+		setId(id);
+		return this;
+	}
+
+	/**
+	 * Name.
+	 *
+	 * @param name the name
+	 * @return the employee
+	 */
+	public Employee name(String name) {
+		setName(name);
+		return this;
+	}
+
+	/**
+	 * Salary.
+	 *
+	 * @param salary the salary
+	 * @return the employee
+	 */
+	public Employee salary(double salary) {
+		setSalary(salary);
+		return this;
 	}
 
 }
