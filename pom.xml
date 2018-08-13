@@ -43,8 +43,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.jalalkiswani</groupId>
-			<artifactId>jk-smart-desktop</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<artifactId>jk-application</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
