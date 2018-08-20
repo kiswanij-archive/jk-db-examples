@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jalalkiswani</groupId>
 	<artifactId>jk-examples</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1-BETA-SNAPSHOT</version>
 
 	<build>
 		<plugins>
@@ -43,8 +43,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.jalalkiswani</groupId>
-			<artifactId>jk-smart-desktop</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<artifactId>jk-application</artifactId>
+			<version>1.0.1-BETA-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
