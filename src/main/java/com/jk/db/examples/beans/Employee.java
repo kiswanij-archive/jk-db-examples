@@ -15,15 +15,24 @@
  */
 package com.jk.db.examples.beans;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Employee.
  *
  * @author Jalal Kiswani
  */
 public class Employee {
+	
+	/** The id. */
 	int id;
+	
+	/** The name. */
 	String name;
+	
+	/** The salary. */
 	double salary;
+	
+	/** The department. */
 	Department department;
 
 	/**

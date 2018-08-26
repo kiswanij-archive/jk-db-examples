@@ -22,6 +22,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Employee.
  *
@@ -30,16 +31,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "hr_employees")
 public class Employee {
+	
+	/** The id. */
 	@Id
 	@Column(name = "emp_id")
 	int id;
 
+	/** The name. */
 	@Column(name = "emp_name")
 	String name;
 
+	/** The salary. */
 	@Column(name = "emp_salary")
 	double salary;
 
+	/** The department. */
 	@ManyToOne
 	@JoinColumn(name = "dep_id")
 	Department department;

@@ -20,6 +20,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Department.
  *
@@ -28,10 +29,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "hr_departments")
 public class Department {
+	
+	/** The id. */
 	@Id
 	@Column(name = "dep_id")
 	int id;
 
+	/** The name. */
 	@Column(name = "dep_name")
 	String name;
 

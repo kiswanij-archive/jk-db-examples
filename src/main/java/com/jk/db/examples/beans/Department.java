@@ -15,13 +15,18 @@
  */
 package com.jk.db.examples.beans;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Department.
  *
  * @author Jalal Kiswani
  */
 public class Department {
+	
+	/** The id. */
 	int id;
+	
+	/** The name. */
 	String name;
 
 	/**

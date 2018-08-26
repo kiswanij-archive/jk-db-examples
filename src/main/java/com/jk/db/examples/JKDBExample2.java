@@ -31,6 +31,7 @@ import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.examples.beans.Department;
 import com.jk.util.JK;
 
+// TODO: Auto-generated Javadoc
 /**
  * Full Plain API exmaple.
  *
@@ -41,6 +42,8 @@ public class JKDBExample2 {
 		// Un-comment the below line to enable debugging
 		// JK.debug();
 	}
+	
+	/** The data access. */
 	static JKPlainDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**
