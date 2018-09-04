@@ -28,7 +28,7 @@ import com.jk.db.dataaccess.plain.JKFinder;
 import com.jk.db.dataaccess.plain.JKPlainDataAccess;
 import com.jk.db.dataaccess.plain.JKUpdater;
 import com.jk.db.datasource.JKDataSourceFactory;
-import com.jk.db.examples.beans.Department;
+import com.jk.db.util.test.examples.beans.Department;
 import com.jk.util.JK;
 
 // TODO: Auto-generated Javadoc

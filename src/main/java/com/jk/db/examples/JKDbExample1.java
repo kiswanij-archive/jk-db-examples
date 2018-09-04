@@ -19,7 +19,7 @@ import java.util.List;
 
 import com.jk.db.dataaccess.plain.JKPlainDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
-import com.jk.db.examples.beans.Employee;
+import com.jk.db.util.test.examples.beans.Employee;
 import com.jk.util.JK;
 
 // TODO: Auto-generated Javadoc

@@ -20,7 +20,7 @@ import java.util.Map;
 
 import com.jk.db.dataaccess.orm.JKOrmDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
-import com.jk.db.examples.entities.Department;
+import com.jk.db.util.test.examples.entities.Department;
 import com.jk.util.JK;
 
 // TODO: Auto-generated Javadoc
