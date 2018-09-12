@@ -1,10 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jalalkiswani</groupId>
 	<artifactId>jk-examples</artifactId>
 	<version>1.0.1-BETA-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.jalalkiswani</groupId>
+			<artifactId>jk-db-dynamic</artifactId>
+			<version>1.0.1-BETA-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -40,11 +47,5 @@
 		</profile>
 	</profiles>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.jalalkiswani</groupId>
-			<artifactId>jk-smart-desktop</artifactId>
-			<version>1.0.1-BETA-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+
 </project>
