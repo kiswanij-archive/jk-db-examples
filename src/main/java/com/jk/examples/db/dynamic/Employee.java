@@ -32,7 +32,7 @@ public class Employee {
 	String email;
 	
 	/** The salary. */
-	double salary;
+	Double salary;
 	
 	/**
 	 * Creates the.
@@ -84,7 +84,7 @@ public class Employee {
 	 *
 	 * @return the salary
 	 */
-	public double getSalary() {
+	public Double getSalary() {
 		return salary;
 	}
 
@@ -93,7 +93,7 @@ public class Employee {
 	 *
 	 * @param salary the new salary
 	 */
-	public void setSalary(double salary) {
+	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
 
@@ -144,7 +144,7 @@ public class Employee {
 	 * @param salary the salary
 	 * @return the employee
 	 */
-	public Employee salary(double salary) {
+	public Employee salary(Double salary) {
 		setSalary(salary);
 		return this;
 	}
