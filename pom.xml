@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jalalkiswani</groupId>
 	<artifactId>jk-examples</artifactId>
-	<version>1.0.1-BETA-SNAPSHOT</version>
+	<version>1.0.1-BETA-2-SNAPSHOT</version>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.jalalkiswani</groupId>
 			<artifactId>jk-db-dynamic</artifactId>
-			<version>1.0.1-BETA-SNAPSHOT</version>
+			<version>1.0.1-BETA-2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
