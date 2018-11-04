@@ -25,7 +25,7 @@ import javax.sql.rowset.CachedRowSet;
 
 import com.jk.db.dataaccess.plain.JKDbIdValue;
 import com.jk.db.dataaccess.plain.JKFinder;
-import com.jk.db.dataaccess.plain.JKPlainDataAccess;
+import com.jk.db.dataaccess.plain.JKDataAccess;
 import com.jk.db.dataaccess.plain.JKUpdater;
 import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.util.test.examples.beans.Department;
@@ -44,7 +44,7 @@ public class JKDBExample2 {
 	}
 	
 	/** The data access. */
-	static JKPlainDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
+	static JKDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**
 	 * The main method.
@@ -190,7 +190,7 @@ public class JKDBExample2 {
 			}
 
 			@Override
-			public String getQuery() {
+			public String getStatement() {
 				return "UPDATE hr_departments SET dep_name=? WHERE dep_id=?";
 			}
 		});

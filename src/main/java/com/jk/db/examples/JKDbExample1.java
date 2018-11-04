@@ -17,7 +17,7 @@ package com.jk.db.examples;
 
 import java.util.List;
 
-import com.jk.db.dataaccess.plain.JKPlainDataAccess;
+import com.jk.db.dataaccess.plain.JKDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.util.test.examples.beans.Employee;
 import com.jk.util.JK;
@@ -34,7 +34,7 @@ public class JKDbExample1 {
 	static final int EMP_ID = 1050;
 	
 	/** The plain data access. */
-	static JKPlainDataAccess plainDataAccess = JKDataSourceFactory.getPlainDataAccess();
+	static JKDataAccess plainDataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**
 	 * The main method.
