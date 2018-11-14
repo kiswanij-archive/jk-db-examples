@@ -75,7 +75,7 @@ public class JKDBExample2 {
 	 * Execute query as single object.
 	 */
 	public static void executeQueryAsSingleObject() {
-		Department dep = dataAccess.executeQueryAsSingleObject(Department.class, "SELECT * FROM hr_departments WHERE dep_id=?", 3);
+		Department dep = dataAccess.executeAsSingleObjectByMapping(Department.class, "SELECT * FROM hr_departments WHERE dep_id=?", 3);
 		JK.printBlock(dep);
 	}
 
@@ -83,7 +83,7 @@ public class JKDBExample2 {
 	 * Execute query as object list.
 	 */
 	public static void executeQueryAsObjectList() {
-		List<Department> list = dataAccess.executeQueryAsObjectList(Department.class, "SELECT * FROM hr_departments WHERE dep_id<>?", 3);
+		List<Department> list = dataAccess.executeAsObjectListByMapping(Department.class, "SELECT * FROM hr_departments WHERE dep_id<>?", 3);
 		JK.printBlock(list);
 	}
 

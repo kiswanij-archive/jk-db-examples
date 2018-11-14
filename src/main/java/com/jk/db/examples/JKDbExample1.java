@@ -68,7 +68,7 @@ public class JKDbExample1 {
 	 */
 	public static void getAllEmployeeRecords() {
 		// get all employees with salary more than 10
-		List<Employee> list = plainDataAccess.executeQueryAsObjectList(Employee.class, "id,name,salary",
+		List<Employee> list = plainDataAccess.executeAsObjectListByMapping(Employee.class, "id,name,salary",
 				"SELECT emp_id,emp_name,emp_salary FROM hr_employees WHERE emp_salary>?", 100);
 		if (list.size() == 0) {
 			JK.print("NO employees found..");
