@@ -23,10 +23,10 @@ import java.util.List;
 
 import javax.sql.rowset.CachedRowSet;
 
-import com.jk.db.dataaccess.plain.JKDbIdValue;
-import com.jk.db.dataaccess.plain.JKFinder;
-import com.jk.db.dataaccess.plain.JKDataAccess;
-import com.jk.db.dataaccess.plain.JKUpdater;
+import com.jk.db.dataaccess.core.JKDataAccessService;
+import com.jk.db.dataaccess.core.JKDbIdValue;
+import com.jk.db.dataaccess.core.JKFinder;
+import com.jk.db.dataaccess.core.JKUpdater;
 import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.util.test.examples.beans.Department;
 import com.jk.util.JK;
@@ -44,7 +44,7 @@ public class JKDBExample2 {
 	}
 	
 	/** The data access. */
-	static JKDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
+	static JKDataAccessService dataAccess = JKDataSourceFactory.getDataAccessService();
 
 	/**
 	 * The main method.

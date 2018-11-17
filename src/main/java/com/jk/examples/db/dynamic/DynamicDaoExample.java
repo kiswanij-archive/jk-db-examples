@@ -29,7 +29,7 @@ import com.jk.util.factory.JKFactory;
  */
 public class DynamicDaoExample {
 	static {
-		JKDataSourceFactory.getPlainDataAccess().dropTable("employee");
+		JKDataSourceFactory.getDataAccessService().dropTable("employee");
 	}
 	
 	/**
