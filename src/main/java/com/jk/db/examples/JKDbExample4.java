@@ -22,6 +22,7 @@ import com.jk.db.dataaccess.orm.JKOrmDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.util.test.examples.entities.Department;
 import com.jk.util.JK;
+import com.jk.util.factory.JKFactory;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -33,18 +34,17 @@ public class JKDbExample4 {
 	static {
 		JK.debug();
 	}
-	
+
 	/** The Constant ID. */
 	private static final int ID = 100;
-	
+
 	/** The orm. */
-	static JKOrmDataAccess orm = JKDataSourceFactory.getOrmDataAccess();
+	static JKOrmDataAccess orm = JKFactory.instance(JKOrmDataAccess.class);
 
 	/**
 	 * The main method.
 	 *
-	 * @param args
-	 *            the arguments
+	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
 		getList();
