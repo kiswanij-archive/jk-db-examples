@@ -8,7 +8,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.jalalkiswani</groupId>
-			<artifactId>jk-db-dynamic</artifactId>
+			<artifactId>jk-db</artifactId>
 			<version>1.0.1-BETA-2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

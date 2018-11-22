@@ -18,7 +18,7 @@ package com.jk.db.examples;
 import java.util.List;
 import java.util.Map;
 
-import com.jk.db.dataaccess.orm.JKOrmDataAccess;
+import com.jk.db.dataaccess.orm.JKObjectDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
 import com.jk.db.util.test.examples.entities.Department;
 import com.jk.util.JK;
@@ -39,7 +39,7 @@ public class JKDbExample4 {
 	private static final int ID = 100;
 
 	/** The orm. */
-	static JKOrmDataAccess orm = JKFactory.instance(JKOrmDataAccess.class);
+	static JKObjectDataAccess orm = JKFactory.instance(JKObjectDataAccess.class);
 
 	/**
 	 * The main method.
@@ -82,7 +82,7 @@ public class JKDbExample4 {
 	 * Delete.
 	 */
 	private static void delete() {
-		orm.delete(ID, Department.class);
+		orm.delete( Department.class, ID);
 		JK.print("Deleted succ...");
 	}
 
