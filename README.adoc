@@ -4,3 +4,4 @@
 ====
 This is a lgeacy API, it is now replaces by Smart-Cloud Data
 ==== 
+image::ERD.PNG[Example ERD] 
