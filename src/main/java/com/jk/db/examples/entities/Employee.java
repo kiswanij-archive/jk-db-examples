@@ -22,8 +22,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.jk.db.util.test.examples.entities.Department;
-
 // TODO: Auto-generated Javadoc
 /**
  * The Class Employee.

@@ -15,7 +15,6 @@
  */
 package com.jk.db.examples.beans;
 
-import com.jk.db.util.test.examples.beans.Department;
 
 // TODO: Auto-generated Javadoc
 /**

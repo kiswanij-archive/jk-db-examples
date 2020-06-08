@@ -15,14 +15,14 @@
  */
 package com.jk.db.examples;
 
+
 import java.util.List;
 import java.util.Map;
 
-import com.jk.db.dataaccess.orm.JKObjectDataAccess;
+import com.jk.db.dataaccess.orm.JKOrmDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
-import com.jk.db.util.test.examples.entities.Department;
+import com.jk.db.examples.beans.Department;
 import com.jk.util.JK;
-import com.jk.util.factory.JKFactory;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -39,7 +39,7 @@ public class JKDbExample4 {
 	private static final int ID = 100;
 
 	/** The orm. */
-	static JKObjectDataAccess orm = JKFactory.instance(JKObjectDataAccess.class);
+	static JKOrmDataAccess orm = JKDataSourceFactory.getOrmDataAccess();
 
 	/**
 	 * The main method.
@@ -82,7 +82,7 @@ public class JKDbExample4 {
 	 * Delete.
 	 */
 	private static void delete() {
-		orm.delete( Department.class, ID);
+		orm.delete(ID,Department.class);
 		JK.print("Deleted succ...");
 	}
 

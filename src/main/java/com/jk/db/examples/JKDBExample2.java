@@ -15,6 +15,7 @@
  */
 package com.jk.db.examples;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,12 +24,12 @@ import java.util.List;
 
 import javax.sql.rowset.CachedRowSet;
 
-import com.jk.db.dataaccess.core.JKDataAccessService;
-import com.jk.db.dataaccess.core.JKDbIdValue;
-import com.jk.db.dataaccess.core.JKFinder;
-import com.jk.db.dataaccess.core.JKUpdater;
+import com.jk.db.dataaccess.plain.JKDbIdValue;
+import com.jk.db.dataaccess.plain.JKFinder;
+import com.jk.db.dataaccess.plain.JKPlainDataAccess;
+import com.jk.db.dataaccess.plain.JKUpdater;
 import com.jk.db.datasource.JKDataSourceFactory;
-import com.jk.db.util.test.examples.beans.Department;
+import com.jk.db.examples.beans.Department;
 import com.jk.util.JK;
 
 // TODO: Auto-generated Javadoc
@@ -44,7 +45,7 @@ public class JKDBExample2 {
 	}
 	
 	/** The data access. */
-	static JKDataAccessService dataAccess = JKDataSourceFactory.getDataAccessService();
+	static JKPlainDataAccess dataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**
 	 * The main method.
@@ -75,7 +76,7 @@ public class JKDBExample2 {
 	 * Execute query as single object.
 	 */
 	public static void executeQueryAsSingleObject() {
-		Department dep = dataAccess.executeAsSingleObjectByMapping(Department.class, "SELECT * FROM hr_departments WHERE dep_id=?", 3);
+		Department dep = dataAccess.executeQueryAsSingleObject(Department.class, "SELECT * FROM hr_departments WHERE dep_id=?", 3);
 		JK.printBlock(dep);
 	}
 
@@ -83,7 +84,7 @@ public class JKDBExample2 {
 	 * Execute query as object list.
 	 */
 	public static void executeQueryAsObjectList() {
-		List<Department> list = dataAccess.executeAsObjectListByMapping(Department.class, "SELECT * FROM hr_departments WHERE dep_id<>?", 3);
+		List<Department> list = dataAccess.executeQueryAsObjectList(Department.class, "SELECT * FROM hr_departments WHERE dep_id<>?", 3);
 		JK.printBlock(list);
 	}
 
@@ -190,7 +191,7 @@ public class JKDBExample2 {
 			}
 
 			@Override
-			public String getStatement() {
+			public String getQuery() {
 				return "UPDATE hr_departments SET dep_name=? WHERE dep_id=?";
 			}
 		});

@@ -15,11 +15,12 @@
  */
 package com.jk.db.examples;
 
+
 import java.util.List;
 
-import com.jk.db.dataaccess.core.JKDataAccessService;
+import com.jk.db.dataaccess.plain.JKPlainDataAccess;
 import com.jk.db.datasource.JKDataSourceFactory;
-import com.jk.db.util.test.examples.beans.Employee;
+import com.jk.db.examples.beans.Employee;
 import com.jk.util.JK;
 
 // TODO: Auto-generated Javadoc
@@ -34,7 +35,7 @@ public class JKDbExample1 {
 	static final int EMP_ID = 1050;
 	
 	/** The plain data access. */
-	static JKDataAccessService plainDataAccess = JKDataSourceFactory.getDataAccessService();
+	static JKPlainDataAccess plainDataAccess = JKDataSourceFactory.getPlainDataAccess();
 
 	/**
 	 * The main method.
@@ -68,7 +69,7 @@ public class JKDbExample1 {
 	 */
 	public static void getAllEmployeeRecords() {
 		// get all employees with salary more than 10
-		List<Employee> list = plainDataAccess.executeAsObjectListByMapping(Employee.class, "id,name,salary",
+		List<Employee> list = plainDataAccess.executeQueryAsObjectList(Employee.class, "id,name,salary",
 				"SELECT emp_id,emp_name,emp_salary FROM hr_employees WHERE emp_salary>?", 100);
 		if (list.size() == 0) {
 			JK.print("NO employees found..");

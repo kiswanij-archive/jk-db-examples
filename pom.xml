@@ -2,14 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jalalkiswani</groupId>
-	<artifactId>jk-examples</artifactId>
-	<version>1.0.1-BETA-3-SNAPSHOT</version>
+	<artifactId>jk-db-examples</artifactId>
+	<version>1.0.0</version>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.jalalkiswani</groupId>
 			<artifactId>jk-db</artifactId>
-			<version>1.0.1-BETA-3-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 

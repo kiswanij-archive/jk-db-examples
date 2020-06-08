@@ -33,8 +33,6 @@ public class Startup {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
-		//JKApplicationManager.getInstance().start();
-//		JKDesktopApplication.start();
 	}
 
 	
