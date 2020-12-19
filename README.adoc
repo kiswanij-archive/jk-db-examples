@@ -2,6 +2,7 @@
 
 [NOTE]
 ====
-This is a lgeacy API, it is now replaces by Smart-Cloud Data
+This is a lgeacy API, it is now replaces by Smart-Cloud Data,
+checkout out this full example at : smart-cloud-data-example
 ==== 
 image::ERD.PNG[Example ERD] 
